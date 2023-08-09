@@ -2,11 +2,13 @@
   "name": "e-commerce",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "netlify deplopy --prod",
-    "start": "netlify deplopy --prod"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,11 +22,8 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.2",
     "morgan": "^1.10.0",
-    "netlify-cli": "^15.11.0",
-    "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.4",
     "nodemailer-smtp-transport": "^2.7.4",
-    "nodemon": "^3.0.1",
-    "serverless-http": "^3.2.0"
+    "nodemon": "^3.0.1"
   }
 }
