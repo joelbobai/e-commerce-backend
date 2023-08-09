@@ -42,7 +42,7 @@ const sendOTP = async ({ email, subject, message, duration = 1 }) => {
 
     // generate pin
     const generatedOTP = await generateOTP();
-    const currentUrl = `http://localhost:3001/api/v1/email_verification/verify/${email}/${generatedOTP}`;
+    const currentUrl = `https://e-commerce-backend-46rw.onrender.com/api/v1/email_verification/verify/${email}/${generatedOTP}`;
 
     // send email
     const mailOptions = {
