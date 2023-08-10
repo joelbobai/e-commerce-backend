@@ -2,7 +2,12 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = process.env;
 
 const logout = async (req, res, next) => {
-  let cookies = req.headers.cookie;
+  let cookies;
+  if(req.headers.cookie){
+    cookies = req.headers.cookie
+  }else if(req.header("Authorization")){
+    cookies = req.header("Authorization");
+  }
   if (!cookies) {
     return res.status(403).send("Access Denied, Token is required!");
   }
